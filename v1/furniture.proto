@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package habbo.furniture.v1;
+
+option objc_class_prefix = "HFURNITURE";
+option csharp_namespace = "Habbo.Furniture.V1";
+option java_package = "furniture.habbo.furniture.v1";
+option php_namespace = "Habbo\\Furniture\\V1";
+
+option java_multiple_files = true;
+
+service FurnitureService {
+    rpc ListAll(ListAllFurnitureRequest) returns (ListAllFurnitureResponse);
+    rpc ListOne(ListOneFurnitureRequest) returns (ListOneFurnitureResponse);
+}
+
+message Furniture {}
+message ListAllFurnitureRequest {}
+message ListAllFurnitureResponse {}
+message ListOneFurnitureRequest {}
+message ListOneFurnitureResponse {}
